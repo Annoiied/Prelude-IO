@@ -63,7 +63,7 @@ npm install --save @prelude-io/core prelude-ts
 ```
 
 ### Principles
-- Busses split parsing and conditional logic into seperate functions
+- Busses split parsing and conditional logic into separate functions
 - IO returns `Either` objects rather than throw exceptions
 - Functions can be `chain`ed or turned into a `union`
 
