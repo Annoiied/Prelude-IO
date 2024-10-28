@@ -23,7 +23,7 @@ const rating = io.number.if(Predicate.of((n) => n > 0 && n <= 5));
 
 // Complex types
 const roomType = io.Complex("Room", {
-  name: io.string.
+  name: io.string,
   description: io.Optional(io.string),
   rating: rating,
 });
