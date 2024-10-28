@@ -33,7 +33,7 @@ const hotelType = io.Complex("Hotel", {
   address: io.string,
   website: io.string,
   rating: rating
-  rooms: io.Vector(Room)
+  rooms: io.Vector(roomType)
 });
 
 // Deserialising
