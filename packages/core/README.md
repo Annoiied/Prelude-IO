@@ -23,7 +23,7 @@ const rating = io.number.if(Predicate.of((n) => n > 0 && n <= 5));
 
 // Complex types
 const roomType = io.Complex("Room", {
-  name: io.string.
+  name: io.string,
   description: io.Optional(io.string),
   rating: rating,
 });
@@ -33,7 +33,7 @@ const hotelType = io.Complex("Hotel", {
   address: io.string,
   website: io.string,
   rating: rating
-  rooms: io.Vector(Room)
+  rooms: io.Vector(roomType)
 });
 
 // Deserialising
@@ -63,7 +63,7 @@ npm install --save @prelude-io/core prelude-ts
 ```
 
 ### Principles
-- Busses split parsing and conditional logic into seperate functions
+- Busses split parsing and conditional logic into separate functions
 - IO returns `Either` objects rather than throw exceptions
 - Functions can be `chain`ed or turned into a `union`
 
